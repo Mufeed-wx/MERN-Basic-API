@@ -1,4 +1,4 @@
-import {React ,useEffect}from 'react'
+import {React ,useEffect,useState}from 'react'
 import '../index.css'
 import { Form, Input, Button } from 'antd'
 import { Link, useNavigate } from 'react-router-dom'
@@ -11,6 +11,7 @@ import jwt_decode from "jwt-decode"
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [user,setUser] = useState({})
   // const googleAuth = async () => {
   //   window.open(
   //     "http://localhost:5000/auth/google/callback",
@@ -20,6 +21,8 @@ const Login = () => {
   function handleCallbackResponse(response) {
     console.log("Encoded JWT ID token" + response.credential);
     const userObject = jwt_decode(response.credential)
+    console.log(userObject);
+    setUser(userObject)
   }
   useEffect(() => {
     /*global google*/
