@@ -1,0 +1,42 @@
+GET http://localhost:5000/posts 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVmZWVkIiwiaWF0IjoxNjczNjIzNjAzfQ.1-BJZmxPkpUsN5GnCjNEdnWoSjzi1dZBer2moO98c5w
+
+
+###
+POST  http://localhost:5000/api/user/get-user-info-by-id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2I1MmM3OWZmNGQ4NWU5MzcxZTVhOTgiLCJpYXQiOjE2NzM2NzY1MjgsImV4cCI6MTY3Mzc2MjkyOH0.iOWk38NaiqQCBY0mc2ayeerdO-Jq-ewGB55pMwsxCvs
+Content-Type: application/json
+
+{
+ "name":"majeed"
+}
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email":"s@gmail.com",
+    "password":"12345678"
+}
+
+###
+POST http://localhost:5000/api/user/getNewTokenUsingRefresh
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2I1MmM3OWZmNGQ4NWU5MzcxZTVhOTgiLCJpYXQiOjE2NzM2NzU1NjN9.uPaN7A5nlvNSr88HE1LQ29E7VZ_bwLAi7H43XzZwNEc"
+}
+
+
+
+
+
+###
+
+POST http://localhost:5001/login
+Content-Type: application/json
+
+{
+    "username":"mufeed"
+}
